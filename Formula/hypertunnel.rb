@@ -5,21 +5,21 @@
 class Hypertunnel < Formula
   desc "P2P file transfer tool using WebRTC"
   homepage "https://github.com/abrekhov/hypertunnel"
-  version "0.0.3-SNAPSHOT-84c7ff7"
+  version "0.0.8"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.3/ht_darwin_amd64"
-      sha256 "8dd03dd43485418aff1aa610ab8c8683138f42ba8d8d73699634af6715362b11"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.8/ht_darwin_amd64"
+      sha256 "551fe013a00706a4f20f99ae846dce7c9aae94eb0e20aaa1226968e5a8feff0e"
 
       def install
         bin.install "ht"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.3/ht_darwin_arm64"
-      sha256 "e26ef8166b8065740507d0eabb8813324eb7d734cde07c61bf8aa032668bdf49"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.8/ht_darwin_arm64"
+      sha256 "237c85703dda9dd295eca24ac8ff8b8da78bf8be15433acd3bb1309d73345852"
 
       def install
         bin.install "ht"
@@ -28,16 +28,16 @@ class Hypertunnel < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.3/ht_linux_amd64"
-      sha256 "eee66c2e4a8d24164f6962dc510e88c67f929d8f8841e5f0dc4dd0e4e27ea256"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.8/ht_linux_amd64"
+      sha256 "224f57cac0d61f65c81b23b46f5ff80a8d047516454faca22f6b7eb2802d9806"
       def install
         bin.install "ht"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.3/ht_linux_arm64"
-      sha256 "6db949ffd38fb011ed88df943e62ac967955dee6776d95e88b8f19aa387634b2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.8/ht_linux_arm64"
+      sha256 "361f2bf6ea4d5c80a0c3d1cac2fdfa53a8785d2495bdbaa8b7c8aca8db5ede84"
       def install
         bin.install "ht"
       end
