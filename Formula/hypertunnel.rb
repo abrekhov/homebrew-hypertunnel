@@ -5,41 +5,49 @@
 class Hypertunnel < Formula
   desc "P2P file transfer tool using WebRTC"
   homepage "https://github.com/abrekhov/hypertunnel"
-  version "0.0.8"
+  version "0.0.9"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.8/ht_darwin_amd64"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.9/ht_darwin_amd64"
       sha256 "551fe013a00706a4f20f99ae846dce7c9aae94eb0e20aaa1226968e5a8feff0e"
 
       def install
-        bin.install "ht"
+        # Assets are published as raw binaries (e.g. ht_darwin_arm64).
+        # Install whichever one Homebrew downloaded, renaming it to `ht`.
+        bin.install Dir["ht_*"][0] => "ht"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.8/ht_darwin_arm64"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.9/ht_darwin_arm64"
       sha256 "237c85703dda9dd295eca24ac8ff8b8da78bf8be15433acd3bb1309d73345852"
 
       def install
-        bin.install "ht"
+        # Assets are published as raw binaries (e.g. ht_darwin_arm64).
+        # Install whichever one Homebrew downloaded, renaming it to `ht`.
+        bin.install Dir["ht_*"][0] => "ht"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.8/ht_linux_amd64"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.9/ht_linux_amd64"
       sha256 "224f57cac0d61f65c81b23b46f5ff80a8d047516454faca22f6b7eb2802d9806"
       def install
-        bin.install "ht"
+        # Assets are published as raw binaries (e.g. ht_darwin_arm64).
+        # Install whichever one Homebrew downloaded, renaming it to `ht`.
+        bin.install Dir["ht_*"][0] => "ht"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.8/ht_linux_arm64"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.9/ht_linux_arm64"
       sha256 "361f2bf6ea4d5c80a0c3d1cac2fdfa53a8785d2495bdbaa8b7c8aca8db5ede84"
       def install
-        bin.install "ht"
+        # Assets are published as raw binaries (e.g. ht_darwin_arm64).
+        # Install whichever one Homebrew downloaded, renaming it to `ht`.
+        bin.install Dir["ht_*"][0] => "ht"
       end
     end
   end
