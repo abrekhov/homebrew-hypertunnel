@@ -5,12 +5,12 @@
 class Hypertunnel < Formula
   desc "P2P file transfer tool using WebRTC"
   homepage "https://github.com/abrekhov/hypertunnel"
-  version "0.0.11"
+  version "0.0.12"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.11/ht_darwin_amd64"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.12/ht_darwin_amd64"
       sha256 "fe22d4379a6d9c3be3a0ff0264a4dbe69c8c6c7e0d3061b6f59e1d24f4f8eae7"
 
       def install
@@ -20,7 +20,7 @@ class Hypertunnel < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.11/ht_darwin_arm64"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.12/ht_darwin_arm64"
       sha256 "7eaac3f97ef15e84d652c94476c7d09b97e0c10ae4db31f9ab5d4ee72f6a24a2"
 
       def install
@@ -33,7 +33,7 @@ class Hypertunnel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.11/ht_linux_amd64"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.12/ht_linux_amd64"
       sha256 "1bb51365df42f4e65f87c403a61dfef8847264f1fe10265638498dc90626ad46"
       def install
         # Assets are published as raw binaries (e.g. ht_darwin_arm64).
@@ -42,7 +42,7 @@ class Hypertunnel < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.11/ht_linux_arm64"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.12/ht_linux_arm64"
       sha256 "896c47060243879dd9725bfb67d1b963ee0942890717dec21f1e82588742b154"
       def install
         # Assets are published as raw binaries (e.g. ht_darwin_arm64).
