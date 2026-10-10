@@ -5,25 +5,25 @@
 class Hypertunnel < Formula
   desc "P2P file transfer tool using WebRTC"
   homepage "https://github.com/abrekhov/hypertunnel"
-  version "0.0.12"
+  version "0.0.13"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.12/ht_darwin_amd64"
-      sha256 "fe22d4379a6d9c3be3a0ff0264a4dbe69c8c6c7e0d3061b6f59e1d24f4f8eae7"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.13/ht_darwin_amd64"
+      sha256 "1cc8547a6c17f8e797098c7e660d53433aa0122701429df4c95f3bc7d2933d98"
 
-      def install
+      define_method(:install) do
         # Assets are published as raw binaries (e.g. ht_darwin_arm64).
         # Install whichever one Homebrew downloaded, renaming it to `ht`.
         bin.install Dir["ht_*"][0] => "ht"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.12/ht_darwin_arm64"
-      sha256 "7eaac3f97ef15e84d652c94476c7d09b97e0c10ae4db31f9ab5d4ee72f6a24a2"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.13/ht_darwin_arm64"
+      sha256 "815c4846e52fcccd1bc05d26571caec05b6d241c102ea5d8d2c922eeeb5a1e76"
 
-      def install
+      define_method(:install) do
         # Assets are published as raw binaries (e.g. ht_darwin_arm64).
         # Install whichever one Homebrew downloaded, renaming it to `ht`.
         bin.install Dir["ht_*"][0] => "ht"
@@ -33,18 +33,18 @@ class Hypertunnel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.12/ht_linux_amd64"
-      sha256 "1bb51365df42f4e65f87c403a61dfef8847264f1fe10265638498dc90626ad46"
-      def install
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.13/ht_linux_amd64"
+      sha256 "cf81f26c1602c3780a33fb5dc52ad96522f1be05d4a787653eeaa93da2c46957"
+      define_method(:install) do
         # Assets are published as raw binaries (e.g. ht_darwin_arm64).
         # Install whichever one Homebrew downloaded, renaming it to `ht`.
         bin.install Dir["ht_*"][0] => "ht"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.12/ht_linux_arm64"
-      sha256 "896c47060243879dd9725bfb67d1b963ee0942890717dec21f1e82588742b154"
-      def install
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.13/ht_linux_arm64"
+      sha256 "d38b6df588014254a6a062bee252d73b30d9c57c23f1e798ef9796483a3bc7c0"
+      define_method(:install) do
         # Assets are published as raw binaries (e.g. ht_darwin_arm64).
         # Install whichever one Homebrew downloaded, renaming it to `ht`.
         bin.install Dir["ht_*"][0] => "ht"
