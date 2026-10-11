@@ -5,13 +5,13 @@
 class Hypertunnel < Formula
   desc "P2P file transfer tool using WebRTC"
   homepage "https://github.com/abrekhov/hypertunnel"
-  version "0.0.13"
+  version "0.0.14"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.13/ht_darwin_amd64"
-      sha256 "1cc8547a6c17f8e797098c7e660d53433aa0122701429df4c95f3bc7d2933d98"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.14/ht_darwin_amd64"
+      sha256 "1364c7aa1ae3e0218c4ef5b0139afba82d4837f2a3be9eb3ed7cb5680ce62299"
 
       define_method(:install) do
         # Assets are published as raw binaries (e.g. ht_darwin_arm64).
@@ -20,8 +20,8 @@ class Hypertunnel < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.13/ht_darwin_arm64"
-      sha256 "815c4846e52fcccd1bc05d26571caec05b6d241c102ea5d8d2c922eeeb5a1e76"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.14/ht_darwin_arm64"
+      sha256 "3eca46cbf22ae62c04a63c3d7e13e9252f62f6582decdb406100ea4af492d53b"
 
       define_method(:install) do
         # Assets are published as raw binaries (e.g. ht_darwin_arm64).
@@ -33,8 +33,8 @@ class Hypertunnel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.13/ht_linux_amd64"
-      sha256 "cf81f26c1602c3780a33fb5dc52ad96522f1be05d4a787653eeaa93da2c46957"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.14/ht_linux_amd64"
+      sha256 "1ec3f734f5955a8a619efa446370acabe559e165165f281c19ada68489b65bb0"
       define_method(:install) do
         # Assets are published as raw binaries (e.g. ht_darwin_arm64).
         # Install whichever one Homebrew downloaded, renaming it to `ht`.
@@ -42,8 +42,8 @@ class Hypertunnel < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.13/ht_linux_arm64"
-      sha256 "d38b6df588014254a6a062bee252d73b30d9c57c23f1e798ef9796483a3bc7c0"
+      url "https://github.com/abrekhov/hypertunnel/releases/download/v0.0.14/ht_linux_arm64"
+      sha256 "d7463cd3c5b63739391602faaf47f81992b8eb18f2e14d167153ed6bb34925f9"
       define_method(:install) do
         # Assets are published as raw binaries (e.g. ht_darwin_arm64).
         # Install whichever one Homebrew downloaded, renaming it to `ht`.
